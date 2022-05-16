@@ -18,6 +18,7 @@ body {
   margin: 0 auto;
 }
 
+/*Menu*/
 .header {
   width: 100%;
   min-height: 10vh;
@@ -31,6 +32,29 @@ body {
   height: 80px;
 }
 
+ul {
+  list-style: none;
+  padding-right: 20px;
+}
+ul li {
+  float: right;
+  padding-top: 30px;
+}
+
+ul a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+ul a:hover {
+  color: aliceblue;
+  background: rebeccapurple;
+  border-radius: 7%;
+}
+
+/*Biografia*/
 .sobre {
   display: flex;
   background-image: url("../IMG/backport.jpg");
@@ -66,6 +90,7 @@ body {
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
 }
 
+/*Portfólios/projetos*/
 .port {
   display: block;
   padding-left: 500px;
@@ -82,6 +107,7 @@ body {
   width: 900px;
 }
 
+/*rodapé*/
 footer {
   font-size: small;
   clear: both;
@@ -98,26 +124,4 @@ footer h3 {
 footer p {
   padding-top: 5px;
   text-align: center;
-}
-
-ul {
-  list-style: none;
-  padding-right: 20px;
-}
-ul li {
-  float: right;
-  padding-top: 30px;
-}
-
-ul a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-ul a:hover {
-  color: aliceblue;
-  background: rebeccapurple;
-  border-radius: 7%;
 }
