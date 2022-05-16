@@ -21,7 +21,7 @@ body {
 .header {
   width: 100%;
   min-height: 10vh;
-  background: #333232;
+  background: darkgrey;
 }
 
 .devicon {
@@ -113,7 +113,7 @@ ul a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
 ul a:hover {
