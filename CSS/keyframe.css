@@ -1,0 +1,17 @@
+@keyframes foto {
+  from {
+    border-radius: 10%;
+  }
+  to {
+    border-radius: 50%;
+  }
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 3;
+  }
+}

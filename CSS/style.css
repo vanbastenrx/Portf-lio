@@ -1,3 +1,6 @@
+@import url("./keyframe.css") foto, opac;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +12,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 30px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 200;
+  font-family: "Varela Round", Courier, monospace;
+  font-weight: 400;
   overflow-x: hidden;
 }
 
@@ -46,12 +49,14 @@ ul a {
   padding: 10px;
   text-decoration: none;
   color: black;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
 ul a:hover {
   color: aliceblue;
   background: rebeccapurple;
   border-radius: 7%;
+  box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
 }
 
 /*Biografia*/
@@ -73,19 +78,31 @@ ul a:hover {
 }
 
 .bio h1 {
+  animation-name: opac;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
   padding-top: 100px;
   float: right;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  /* letter-spacing: 2px; */
 }
 
 .bio p {
-  font-size: large;
+  animation-name: opac;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+  font-weight: 300;
   letter-spacing: 4px;
+  color: #fff;
 }
 
 #foto {
-  border-radius: 50%;
+  animation-name: foto;
+  /* animation-delay: 0.8s; */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  margin-top: 100px;
+  /* border-radius: 50%; */
   height: 400px;
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
 }
