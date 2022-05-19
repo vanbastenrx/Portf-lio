@@ -13,28 +13,21 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  font-size: 30px;
   font-family: "Varela Round", Courier, monospace;
-  font-weight: 400;
   overflow-x: hidden;
-}
-
-.container {
-  margin: 0 auto;
 }
 
 /*Menu*/
 .header {
   width: 100%;
-  min-height: 10vh;
+  max-height: 10%;
   background: darkgrey;
 }
 
 .devicon {
-  padding-top: 15px;
-  padding-left: 15px;
-  width: 80px;
-  height: 80px;
+  padding: 25px 0 15px 30px;
+  width: 4vw;
+  height: 8vh;
 }
 
 ul {
@@ -43,15 +36,15 @@ ul {
 }
 ul li {
   float: right;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 ul a {
   display: block;
-  padding: 10px;
+  padding: 4px 15px 4px 15px;
   text-decoration: none;
+  font-size: 1.5em;
   color: black;
-  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
 ul a:hover {
@@ -62,68 +55,160 @@ ul a:hover {
 }
 
 /*Biografia*/
-.sobre {
-  display: flex;
-  background-image: url("../IMG/backport.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  padding-top: 100px;
-}
-
 .bio {
-  padding-top: 10px;
-  width: 500px;
-  padding-left: 500px;
+  background-image: url("../IMG/portfolio-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0 5% 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
-.bio h1 {
+.description {
   animation-name: opac;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
-  padding-top: 100px;
-  float: right;
-  text-transform: uppercase;
-  /* letter-spacing: 2px; */
-}
-
-.bio p {
-  animation-name: opac;
-  animation-duration: 8s;
-  animation-fill-mode: forwards;
-  font-weight: 300;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+  font-size: 1em;
   color: #fff;
+  width: 24%;
 }
 
 #foto {
   animation-name: foto;
-  /* animation-delay: 0.8s; */
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  margin-top: 100px;
-  /* border-radius: 50%; */
   height: 400px;
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
 }
 
-/*Portfólios/projetos*/
+/*Portfólios/SLIDER*/
 .port {
-  display: block;
-  padding-left: 500px;
   background-color: aqua;
 }
 
 .port h1 {
+  font-size: 5em;
+  padding-top: 2%;
   text-align: center;
-  padding-right: 400px;
-  padding-top: 20px;
 }
 
-.imgport {
-  width: 900px;
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide img {
+  width: 50vw;
+  height: 50vh;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
+
+/*tecnologias*/
+#techs {
+  padding: 30px 0 20px 0;
+  background-color: aquamarine;
+}
+#techs h3 {
+  padding-bottom: 30px;
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+.icons {
+  justify-content: center;
+  display: flex;
+}
+
+.techIcon {
+  width: 8vw;
+  height: 15vh;
 }
 
 /*rodapé*/

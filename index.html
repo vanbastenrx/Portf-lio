@@ -16,40 +16,78 @@
       <header class="header">
         <ul id="hamburguer">
           <img class="devicon" src="./IMG/devicon.png" />
-          <li><a class="menu" href="#">SOBRE</a></li>
-          <li><a class="menu" href="#">PORTFÓLIO</a></li>
-          <li><a class="menu" href="#">CONTATO</a></li>
+          <li class="nav-item"><a href="#techs">TECH'S</a></li>
+          <li class="nav-item"><a href="#portfolio">PORTFOLIO</a></li>
+          <li class="nav-item"><a href="#sobre">ABOUT</a></li>
         </ul>
       </header>
 
-      <section class="sobre">
+      <section id="sobre">
         <div class="bio">
-          <h1>Oi, eu sou <spam>Van Basten</spam></h1>
-          <p>
-            Tenho 27 anos, estudante de desenvolvimento web desde 2020 venho
-            buscando aprimorar minhas habilidades para ser um Desenvolvedor
-            Front-End.
-          </p>
-        </div>
-        <div class="imgbio">
-          <img id="foto" src="./IMG/vanbasten.jpg" />
-        </div>
-      </section>
-      <section id="portfolio" class="port">
-        <h1>PORTFOLIO</h1>
-        <div class="carousel">
-          <div class="project">
-            <a href="https://vanbastenrx.github.io/PigGame/"
-              ><img id="portimg" class="imgport" src="./IMG/pig-game.png"
-            /></a>
+          <div class="description">
+            <h3>Hi, my name is <span>Van Basten</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros
+              dui, dapibus aliquet tellus ac, tempor convallis ipsum. Cras ut
+              orci massa. Donec porta nibh vel ornare luctus. In id mauris et
+              turpis maximus porttitor et non ex. Aenean rutrum lorem non risus
+              ultrices elementum. Maecenas dapibus nisl vel libero tempus
+              pulvinar.
+            </p>
+          </div>
+          <div class="imgbio">
+            <img id="foto" src="./IMG/vanbasten.jpg" />
           </div>
         </div>
       </section>
+
+      <section id="portfolio" class="port">
+        <div>
+          <h1>PORTIFOLIO</h1>
+        </div>
+        <div class="slider">
+          <div class="slide">
+            <a href="#"><img src="./IMG/mapty.png" alt="#" /></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="./IMG/pig-game.png" alt="#" /></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="./IMG/guess-number.png" alt="#" /></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="./IMG/mata-mosquito.png" alt="#" /></a>
+          </div>
+          <div class="slide">
+            <a href="#"><img src="./IMG/site-banco.png" alt="#" /></a>
+          </div>
+
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+
+      <section id="techs">
+        <h3 data-anime="left">TECHNOLOGIES</h3>
+        <div class="icons" data-anime="right">
+          <img class="techIcon" src="./IMG/css3.png" />
+          <img class="techIcon" src="./IMG/html5.png" />
+          <img class="techIcon" src="./IMG/bootstrap.png" />
+          <img class="techIcon" src="./IMG/design-responsivo.png" />
+          <img class="techIcon" src="./IMG/javascript.png" />
+          <img class="techIcon" src="./IMG/react.png" />
+        </div>
+      </section>
+
+      <!--fim do container-->
     </div>
-    <footer>
-      <h3>Van Basten</h3>
-      <p>Todos os direitos reservados © 2022.</p>
-    </footer>
+    <div class="footer" data-anime="left">
+      <footer>
+        <h3>Van Basten</h3>
+        <p>Todos os direitos reservados © 2022.</p>
+      </footer>
+    </div>
     <script src="./JS/script.js"></script>
   </body>
 </html>

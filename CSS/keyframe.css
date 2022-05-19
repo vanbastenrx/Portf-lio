@@ -1,17 +1,22 @@
 @keyframes foto {
   from {
+    transform: translateY(-5vh);
     border-radius: 10%;
   }
   to {
+    transform: translateY(0);
     border-radius: 50%;
   }
 }
 
 @keyframes opac {
   from {
+    transform: translateX(-20vw);
+
     opacity: 0;
   }
   to {
+    transform: translateX(0);
     opacity: 3;
   }
 }
