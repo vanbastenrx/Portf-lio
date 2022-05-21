@@ -7,9 +7,11 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -18,40 +20,75 @@ body {
 }
 
 /*Menu*/
-.header {
-  width: 100%;
-  max-height: 10%;
-  background: darkgrey;
+.head {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background: whitesmoke;
+  justify-content: space-between;
 }
 
 .devicon {
-  padding: 25px 0 15px 30px;
-  width: 4vw;
+  width: 20%;
   height: 8vh;
 }
 
-ul {
-  list-style: none;
-  padding-right: 20px;
-}
-ul li {
-  float: right;
-  padding-top: 40px;
+#hamburguer {
+  display: flex;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-ul a {
+#menu {
   display: block;
-  padding: 4px 15px 4px 15px;
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  right: 0;
+  height: 0px;
+  transition: 0.6s;
+  background: rebeccapurple;
+  z-index: 1000;
+}
+
+#navbar.active #menu {
+  height: calc(100vh - 70px);
+}
+
+#navbar ul {
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.nav-item a {
+  display: block;
+  padding: 1rem;
   text-decoration: none;
-  font-size: 1.5em;
-  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+}
+
+#bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
 }
 
 ul a:hover {
-  color: aliceblue;
+  color: white;
   background: rebeccapurple;
-  border-radius: 7%;
-  box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
+  border-radius: 5%;
+  box-shadow: rgba(20, 20, 20, 0.4);
 }
 
 /*Biografia*/
@@ -59,39 +96,56 @@ ul a:hover {
   background-image: url("../IMG/portfolio-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5% 0 5% 0;
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .description {
   animation-name: opac;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  letter-spacing: 6px;
-  font-size: 1em;
+  letter-spacing: 4px;
+  font-size: 0.7rem;
+  padding: 15% 5% 15% 5%;
   color: #fff;
-  width: 24%;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+.description p,
+h3 {
+  padding: 0 5% 0 5%;
 }
 
 #foto {
   animation-name: foto;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  height: 400px;
+  width: auto;
+  max-height: 300px;
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
+}
+
+.imgbio {
+  padding-bottom: 20%;
 }
 
 /*Portfólios/SLIDER*/
 .port {
-  background-color: aqua;
+  /* width: 100%;
+  height: 50%; */
+  background-color: rebeccapurple;
 }
 
 .port h1 {
-  font-size: 5em;
-  padding-top: 2%;
+  font-size: 2em;
+  padding-bottom: 0;
+  padding-top: 25%;
   text-align: center;
 }
 
@@ -100,65 +154,60 @@ ul a:hover {
   height: 50rem;
   margin: 0 auto;
   position: relative;
-
-  /* IN THE END */
   overflow: hidden;
 }
 
 .slide {
   position: absolute;
-  top: 0;
+  top: 10%;
   width: 100%;
-  height: 50rem;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* THIS creates the animation! */
+  overflow-y: hidden;
   transition: transform 1s;
 }
 
 .slide > img {
-  /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .slide img {
-  width: 50vw;
-  height: 50vh;
+  width: 70vw;
+  height: 70vh;
 }
 
 .slider__btn {
   position: absolute;
-  top: 50%;
-  z-index: 10;
-
+  top: 35%;
+  /* z-index: 5; */
   border: none;
   background: rgba(255, 255, 255, 0.7);
   font-family: inherit;
   color: #333;
   border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
+  height: 2rem;
+  width: 2rem;
+  font-size: 0.5rem;
   cursor: pointer;
 }
 
 .slider__btn--left {
-  left: 6%;
+  left: 7%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: 6%;
+  right: 7%;
   transform: translate(50%, -50%);
 }
 
 .dots {
   position: absolute;
-  bottom: 5%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -174,8 +223,6 @@ ul a:hover {
   margin-right: 1.75rem;
   cursor: pointer;
   transition: all 0.5s;
-
-  /* Only necessary when overlying images */
   box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
 }
 
@@ -184,30 +231,34 @@ ul a:hover {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #888;
+  background-color: #fff;
   opacity: 1;
 }
 
 /*tecnologias*/
 #techs {
-  padding: 30px 0 20px 0;
-  background-color: aquamarine;
+  padding: 2% 0 20px 0;
+  background-color: white;
 }
 #techs h3 {
-  padding-bottom: 30px;
+  padding: 1% 0 3% 0;
   display: block;
+  font-size: 2em;
   color: black;
   text-align: center;
 }
 
 .icons {
-  justify-content: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding-bottom: 5%;
 }
 
 .techIcon {
-  width: 8vw;
+  justify-content: center;
+  padding: 1% 2% 0 2%;
+  width: 30vw;
   height: 15vh;
 }
 
@@ -217,11 +268,11 @@ footer {
   clear: both;
   color: white;
   background: #333232;
-  min-height: 120px;
+  min-height: 150px;
 }
 
 footer h3 {
-  padding-top: 30px;
+  padding-top: 50px;
   text-align: center;
 }
 

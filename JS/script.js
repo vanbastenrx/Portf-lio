@@ -25,7 +25,21 @@ const scrollToPosition = (to) => {
   });
 };
 
-//Slider
+//menu hamburguer
+const btnHamburguer = document.getElementById("hamburguer");
+
+const toggleMenu = (event) => {
+  if (event.type === "touchstart") event.preventDefault();
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("active");
+};
+
+btnHamburguer.addEventListener("click", toggleMenu); // << A função esta sendo chamada aqui toggleMenu();
+btnHamburguer.addEventListener("touchstart", toggleMenu);
+
+//Fechar o menu apos clicar nos links
+
+//Slider function
 const slider = () => {
   const slides = document.querySelectorAll(".slide");
   const btnLeft = document.querySelector(".slider__btn--left");
@@ -46,12 +60,12 @@ const slider = () => {
 
   const activateDot = (slide) => {
     document
-      .querySelectorAll(".dots_dot")
+      .querySelectorAll(".dots__dot")
       .forEach((dot) => dot.classList.remove("dots__dot--active"));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
-      .classList.add("dots_dot--active");
+      .classList.add("dots__dot--active");
   };
 
   const goToSlide = (slide) => {
@@ -97,7 +111,7 @@ const slider = () => {
   });
 
   dotContainer.addEventListener("click", (e) => {
-    if (e.target.classList.contais("dots__dot")) {
+    if (e.target.classList.contains("dots__dot")) {
       const { slide } = e.target.dataset;
       goToSlide(slide);
       activateDot(slide);

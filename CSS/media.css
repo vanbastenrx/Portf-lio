@@ -1,0 +1,11 @@
+/* @media screen and (max-width: 600px) {
+  #hamburguer {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+  #nav.active #menu {
+    display: flex;
+  }
+} */

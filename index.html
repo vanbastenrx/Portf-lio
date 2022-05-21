@@ -14,12 +14,23 @@
   <body>
     <div class="container">
       <header class="header">
-        <ul id="hamburguer">
+        <div class="head">
           <img class="devicon" src="./IMG/devicon.png" />
-          <li class="nav-item"><a href="#techs">TECH'S</a></li>
-          <li class="nav-item"><a href="#portfolio">PORTFOLIO</a></li>
-          <li class="nav-item"><a href="#sobre">ABOUT</a></li>
-        </ul>
+          <nav id="navbar">
+            <button id="hamburguer" aria-expanded="false">
+              <div>
+                <span id="bar"></span>
+                <span id="bar"></span>
+                <span id="bar"></span>
+              </div>
+            </button>
+            <ul id="menu" role="menu">
+              <li class="nav-item"><a href="#techs">TECH'S</a></li>
+              <li class="nav-item"><a href="#portfolio">PORTFOLIO</a></li>
+              <li class="nav-item"><a href="#sobre">ABOUT</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <section id="sobre">
@@ -47,19 +58,29 @@
         </div>
         <div class="slider">
           <div class="slide">
-            <a href="#"><img src="./IMG/mapty.png" alt="#" /></a>
+            <a href="https://vanbastenrx.github.io/Mapty/"
+              ><img src="./IMG/mapty.png" alt="#"
+            /></a>
           </div>
           <div class="slide">
-            <a href="#"><img src="./IMG/pig-game.png" alt="#" /></a>
+            <a href="https://vanbastenrx.github.io/PigGame/"
+              ><img src="./IMG/piggame.png" alt="#"
+            /></a>
           </div>
           <div class="slide">
-            <a href="#"><img src="./IMG/guess-number.png" alt="#" /></a>
+            <a href="https://vanbastenrx.github.io/guessmynumberjs/"
+              ><img src="./IMG/number.png" alt="#"
+            /></a>
           </div>
           <div class="slide">
-            <a href="#"><img src="./IMG/mata-mosquito.png" alt="#" /></a>
+            <a href="https://vanbastenrx.github.io/Jogo-Mata-Mosquito/"
+              ><img src="./IMG/mosquito.png" alt="#"
+            /></a>
           </div>
           <div class="slide">
-            <a href="#"><img src="./IMG/site-banco.png" alt="#" /></a>
+            <a href="https://vanbastenrx.github.io/finans/"
+              ><img src="./IMG/sitebanco.png" alt="#"
+            /></a>
           </div>
 
           <button class="slider__btn slider__btn--left">&larr;</button>
@@ -71,12 +92,24 @@
       <section id="techs">
         <h3 data-anime="left">TECHNOLOGIES</h3>
         <div class="icons" data-anime="right">
-          <img class="techIcon" src="./IMG/css3.png" />
-          <img class="techIcon" src="./IMG/html5.png" />
-          <img class="techIcon" src="./IMG/bootstrap.png" />
-          <img class="techIcon" src="./IMG/design-responsivo.png" />
-          <img class="techIcon" src="./IMG/javascript.png" />
-          <img class="techIcon" src="./IMG/react.png" />
+          <div class="icon1">
+            <img class="techIcon" src="./IMG/html.png" />
+          </div>
+          <div class="icon2">
+            <img class="techIcon" src="./IMG/css3.png" />
+          </div>
+          <div class="icon3">
+            <img class="techIcon" src="./IMG/bootstrap.png" />
+          </div>
+          <div class="icon4">
+            <img class="techIcon" src="./IMG/responsive.png" />
+          </div>
+          <div class="icon5">
+            <img class="techIcon" src="./IMG/js.png" />
+          </div>
+          <div class="icon6">
+            <img class="techIcon" src="./IMG/react.png" />
+          </div>
         </div>
       </section>
 
