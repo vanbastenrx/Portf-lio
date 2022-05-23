@@ -154,6 +154,15 @@ h3 {
   padding-bottom: 20%;
 }
 
+.bio-link {
+  display: flex;
+}
+
+.bio-img {
+  height: 50px;
+  width: 50px;
+}
+
 /*Portfólios/SLIDER*/
 .port {
   background-color: rebeccapurple;
@@ -292,7 +301,7 @@ footer {
 }
 
 footer h3 {
-  padding-top: 50px;
+  padding-top: 17%;
   text-align: center;
 }
 
