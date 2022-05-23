@@ -27,7 +27,9 @@ const scrollToPosition = (to) => {
 
 //menu hamburguer
 const btnHamburguer = document.getElementById("hamburguer");
+const navItem = document.getElementById("menu");
 
+//Abrir o menu
 const toggleMenu = (event) => {
   if (event.type === "touchstart") event.preventDefault();
   const nav = document.getElementById("navbar");
@@ -38,6 +40,12 @@ btnHamburguer.addEventListener("click", toggleMenu); // << A função esta sendo
 btnHamburguer.addEventListener("touchstart", toggleMenu);
 
 //Fechar o menu apos clicar nos links
+const closeMenu = () => {
+  const nav = document.getElementById("navbar");
+  nav.classList.remove("active");
+};
+navItem.addEventListener("click", closeMenu);
+navItem.addEventListener("touchstart", closeMenu);
 
 //Slider function
 const slider = () => {

@@ -1,11 +1,2 @@
-/* @media screen and (max-width: 600px) {
-  #hamburguer {
-    display: block;
-  }
-  #menu {
-    display: none;
-  }
-  #nav.active #menu {
-    display: flex;
-  }
-} */
+@media screen and (min-width: 1200px) {
+}
