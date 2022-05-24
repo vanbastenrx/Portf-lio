@@ -1,6 +1,6 @@
 "use strict";
 
-// Scroll
+// Scroll smooth
 const menu = document.querySelectorAll(".nav-item");
 
 const getScrollTopByHref = (el) => {
@@ -25,7 +25,9 @@ const scrollToPosition = (to) => {
   });
 };
 
-//menu hamburguer
+// ----------------------------------------------------------------
+
+//Menu Hamburguer
 const btnHamburguer = document.getElementById("hamburguer");
 const navItem = document.getElementById("menu");
 
@@ -46,6 +48,8 @@ const closeMenu = () => {
 };
 navItem.addEventListener("click", closeMenu);
 navItem.addEventListener("touchstart", closeMenu);
+
+// --------------------------------------------------------
 
 //Slider function
 const slider = () => {
@@ -127,3 +131,21 @@ const slider = () => {
   });
 };
 slider();
+
+// -----------------------------------------------------------------
+
+// Animation scroll
+const target = document.querySelectorAll("[data-anime]");
+const animation = "animate";
+
+const animeScroll = () => {
+  const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+
+  target.forEach((el) =>
+    windowTop > el.offsetTop
+      ? el.classList.add(animation)
+      : el.classList.remove(animation)
+  );
+};
+
+target.length ? window.addEventListener("scroll", animeScroll) : "";

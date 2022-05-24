@@ -21,10 +21,9 @@ body {
 
 /*Menu*/
 .head {
-  /* position: fixed; */
   overflow-y: hidden;
   box-sizing: border-box;
-  height: 70px;
+  height: 100px;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -50,16 +49,16 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  top: 70px;
+  top: 100px;
   right: 0;
-  height: 0px;
+  height: 0;
   transition: 0.6s;
   background: rebeccapurple;
   z-index: 1000;
 }
 
 #navbar.active #menu {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 100px);
 }
 
 #navbar ul {
@@ -102,12 +101,21 @@ body {
 }
 
 .intro-text {
+  animation-name: opac;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
   padding: 0 5% 0 5%;
   color: black;
   padding-top: 15%;
   justify-content: center;
+  text-align: center;
   font-weight: bold;
   letter-spacing: 2px;
+  font-size: large;
+}
+
+.intro-text p {
+  padding-top: 10%;
 }
 
 /*Biografia*/
@@ -124,11 +132,9 @@ body {
 }
 
 .description {
-  animation-name: opac;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
   letter-spacing: 4px;
   font-size: 0.8rem;
+  font-weight: bold;
   padding: 15% 5% 15% 5%;
   color: #fff;
   width: 100%;
@@ -142,9 +148,7 @@ h3 {
 }
 
 #foto {
-  animation-name: foto;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+  border-radius: 50%;
   width: auto;
   max-height: 300px;
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
@@ -161,6 +165,7 @@ h3 {
 .bio-img {
   height: 50px;
   width: 50px;
+  margin: 10px;
 }
 
 /*Portfólios/SLIDER*/
@@ -293,6 +298,8 @@ h3 {
 
 /*rodapé*/
 footer {
+  display: flex;
+  justify-content: center;
   font-size: small;
   clear: both;
   color: white;
@@ -308,4 +315,26 @@ footer h3 {
 footer p {
   padding-top: 5px;
   text-align: center;
+}
+
+footer a {
+  overflow-y: hidden;
+}
+
+/* animation */
+[data-anime] {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-70px, 0, 0);
+}
+[data-anime="right"] {
+  transform: translate3d(70px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }

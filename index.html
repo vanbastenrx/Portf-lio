@@ -36,18 +36,17 @@
         <div class="intro-text">
           <h1>INTRODUCTION</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros
-            dui, dapibus aliquet tellus ac, tempor convallis ipsum. Cras ut orci
-            massa. Donec porta nibh vel ornare luctus. In id mauris et turpis
-            maximus porttitor et non ex. Aenean rutrum lorem non risus ultrices
-            elementum. Maecenas dapibus nisl vel libero tempus pulvinar.
+            I made this portfolio using the basics of HTML5, CSS3 and
+            Javascript. It was so much fun to build, and that show me that I'm
+            completely capable to being a Front-End Developer. I hope your
+            enjoy.
           </p>
         </div>
       </section>
 
       <section id="sobre">
         <div class="bio">
-          <div class="description">
+          <div class="description" data-anime="right">
             <h3>Hi, my name is <span>Van Basten</span></h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros
@@ -58,15 +57,18 @@
               pulvinar.
             </p>
           </div>
-          <div class="imgbio">
+          <div class="imgbio" data-anime="left">
             <img id="foto" alt="profile-picture" src="./IMG/vanbasten.jpg" />
           </div>
-          <div class="bio-link">
+          <div class="bio-link" data-anime="right">
             <a href="https://www.linkedin.com/in/van-basten/"
               ><img class="bio-img" src="./IMG/linkedin.png"
             /></a>
             <a href="https://github.com/vanbastenrx"
               ><img class="bio-img" src="./IMG/github.png"
+            /></a>
+            <a href="https://api.whatsapp.com/send?phone=5521990039707"
+              ><img class="bio-img" src="./IMG/wpp.png"
             /></a>
           </div>
         </div>
@@ -74,10 +76,10 @@
 
       <section id="portfolio" class="port">
         <div class="port-text">
-          <h1>PORTIFOLIO</h1>
-          <p>Click on image to acess the project.</p>
+          <h1 data-anime="left">PORTIFOLIO</h1>
+          <p data-anime="right">Click on image to acess the project.</p>
         </div>
-        <div class="slider">
+        <div class="slider" data-anime="left">
           <div class="slide">
             <a href="https://vanbastenrx.github.io/Mapty/"
               ><img src="./IMG/mapty.png" alt="Mapty app"
@@ -112,37 +114,38 @@
 
       <section id="techs">
         <h3 data-anime="left">TECHNOLOGIES</h3>
-        <div class="icons" data-anime="right">
+        <div class="icons">
           <div class="icon1">
-            <img class="techIcon" src="./IMG/html.png" />
+            <img class="techIcon" data-anime="left" src="./IMG/html.png" />
           </div>
           <div class="icon2">
-            <img class="techIcon" src="./IMG/css3.png" />
+            <img class="techIcon" data-anime="right" src="./IMG/css3.png" />
           </div>
           <div class="icon3">
-            <img class="techIcon" src="./IMG/bootstrap.png" />
+            <img class="techIcon" data-anime="left" src="./IMG/bootstrap.png" />
           </div>
           <div class="icon4">
-            <img class="techIcon" src="./IMG/responsive.png" />
+            <img class="techIcon" data-anime="right" src="./IMG/resp.png" />
           </div>
           <div class="icon5">
-            <img class="techIcon" src="./IMG/js.png" />
+            <img class="techIcon" data-anime="left" src="./IMG/js.png" />
           </div>
           <div class="icon6">
-            <img class="techIcon" src="./IMG/react.png" />
+            <img class="techIcon" data-anime="right" src="./IMG/react.png" />
           </div>
           <div class="icon7">
-            <img class="techIcon" src="./IMG/git.png" />
+            <img class="techIcon" data-anime="left" src="./IMG/git.png" />
+          </div>
+          <div class="icon8">
+            <img class="techIcon" data-anime="right" src="./IMG/npm.png" />
           </div>
         </div>
       </section>
-
       <!--fim do container-->
     </div>
-    <div class="footer" data-anime="left">
+    <div class="footer">
       <footer>
         <h3>© 2022 Van Basten, inc.</h3>
-        <!-- <p>All Rights Reserved © 2022.</p> -->
       </footer>
     </div>
     <script src="./JS/script.js"></script>
