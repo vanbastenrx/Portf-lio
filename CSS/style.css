@@ -312,15 +312,6 @@ footer h3 {
   text-align: center;
 }
 
-footer p {
-  padding-top: 5px;
-  text-align: center;
-}
-
-footer a {
-  overflow-y: hidden;
-}
-
 /* animation */
 [data-anime] {
   opacity: 0;
