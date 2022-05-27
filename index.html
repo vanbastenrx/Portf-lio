@@ -7,7 +7,7 @@
 
     <link rel="icon" type="imagem/png" href="./IMG/icone.png" />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/media.css" />
+    <link rel="stylesheet" media="screen" href="./CSS/media.css" />
     <link rel="stylesheet" href="./CSS/keyframe.css" />
     <title>Van Basten - Dev Front-End</title>
   </head>
@@ -26,8 +26,8 @@
             </button>
             <ul id="menu" role="menu">
               <li class="nav-item"><a href="#sobre">ABOUT</a></li>
-              <li class="nav-item"><a href="#portfolio">PORTFOLIO</a></li>
-              <li class="nav-item"><a href="#techs">TECH'S</a></li>
+              <li class="nav-item"><a href="#slider">PORTFOLIO</a></li>
+              <li class="nav-item"><a href="#foot">TECH'S</a></li>
             </ul>
           </nav>
         </div>
@@ -37,8 +37,9 @@
           <h1>INTRODUCTION</h1>
           <p>
             I made this portfolio using the basics of HTML5, CSS3 and
-            Javascript. It was so much fun to build, and that show me that I'm
-            completely capable to being a Front-End Developer. I hope you enjoy.
+            Javascript. It was so much fun to develop this site, and that make
+            me realise that I'm completely capable to being a Front-End
+            Developer. I hope you enjoy.
           </p>
         </div>
       </section>
@@ -46,14 +47,9 @@
       <section id="sobre">
         <div class="bio">
           <div class="description" data-anime="right">
-            <h3>Hi, my name is Van Basten</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros
-              dui, dapibus aliquet tellus ac, tempor convallis ipsum. Cras ut
-              orci massa. Donec porta nibh vel ornare luctus. In id mauris et
-              turpis maximus porttitor et non ex. Aenean rutrum lorem non risus
-              ultrices elementum. Maecenas dapibus nisl vel libero tempus
-              pulvinar.
+            <h3>Hi, i'm Van Basten.</h3>
+            <p>            
+              I'm a Front End Developer. Learning programming since 2020, I'm looking for an opportunity to work in a company to learn and contribute to projects. My goal is to be a React Developer.
             </p>
           </div>
           <div class="imgbio" data-anime="left">
@@ -78,30 +74,31 @@
           <h1 data-anime="left">PORTIFOLIO</h1>
           <p data-anime="right">Click on image to acess the project.</p>
         </div>
-        <div class="slider" data-anime="left">
-          <div class="slide">
-            <a href="https://vanbastenrx.github.io/Mapty/"
-              ><img src="./IMG/mapty.png" alt="Mapty app"
-            /></a>
-          </div>
-          <div class="slide">
-            <a href="https://vanbastenrx.github.io/PigGame/"
-              ><img src="./IMG/piggame.png" alt="Pig Game"
-            /></a>
-          </div>
-          <div class="slide">
-            <a href="https://vanbastenrx.github.io/guessmynumberjs/"
-              ><img src="./IMG/number.png" alt="Guess My Number"
-            /></a>
-          </div>
+        <div id="slider" class="slider">
           <div class="slide">
             <a href="https://vanbastenrx.github.io/Jogo-Mata-Mosquito/"
-              ><img src="./IMG/mosquito.png" alt="Mata Mosquito"
+              ><img src="./IMG/mosquito.png" alt="Jogo-Mata-Mosquito"
+            /></a>
+          </div>
+          <div class="slide">
+            <a href="https://vanbastenrx.github.io/Projeto-Spotify/"
+              ><img src="./IMG/spotify.png" alt="Spotify"
             /></a>
           </div>
           <div class="slide">
             <a href="https://vanbastenrx.github.io/finans/"
               ><img src="./IMG/sitebanco.png" alt="Bank Finans"
+            /></a>
+            
+          </div>
+          <div class="slide">
+            <a href="https://vanbastenrx.github.io/Mapty/"
+              ><img src="./IMG/mapty.png" alt="Mapty"
+            /></a>
+          </div>
+          <div class="slide">
+            <a href="https://vanbastenrx.github.io/guessmynumberjs/"
+              ><img src="./IMG/number.png" alt="Guess My Number"
             /></a>
           </div>
 
@@ -142,9 +139,9 @@
       </section>
       <!--fim do container-->
     </div>
-    <div class="footer">
+    <div id="foot" class="footer">
       <footer>
-        <h3>© 2022 Van Basten, inc.</h3>
+        <p>© 2022 Van Basten, inc.</p>
       </footer>
     </div>
     <script src="./JS/script.js"></script>

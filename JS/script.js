@@ -1,62 +1,62 @@
-"use strict";
+'use strict';
 
 // Scroll smooth
-const menu = document.querySelectorAll(".nav-item");
+const menu = document.querySelectorAll('.nav-item');
 
-const getScrollTopByHref = (el) => {
-  const id = el.getAttribute("href");
+const getScrollTopByHref = el => {
+  const id = el.getAttribute('href');
   return document.querySelector(id).offsetTop;
 };
 
-const scrollToIdOnClick = (event) => {
+const scrollToIdOnClick = event => {
   event.preventDefault();
   const to = getScrollTopByHref(event.target);
   scrollToPosition(to);
 };
 
-menu.forEach((item) => {
-  item.addEventListener("click", scrollToIdOnClick);
+menu.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick);
 });
 
-const scrollToPosition = (to) => {
+const scrollToPosition = to => {
   window.scroll({
     top: to,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 };
 
 // ----------------------------------------------------------------
 
 //Menu Hamburguer
-const btnHamburguer = document.getElementById("hamburguer");
-const navItem = document.getElementById("menu");
+const btnHamburguer = document.getElementById('hamburguer');
+const navItem = document.getElementById('menu');
 
 //Abrir o menu
-const toggleMenu = (event) => {
-  if (event.type === "touchstart") event.preventDefault();
-  const nav = document.getElementById("navbar");
-  nav.classList.toggle("active");
+const toggleMenu = event => {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('active');
 };
 
-btnHamburguer.addEventListener("click", toggleMenu); // << A função esta sendo chamada aqui toggleMenu();
-btnHamburguer.addEventListener("touchstart", toggleMenu);
+btnHamburguer.addEventListener('click', toggleMenu); // << A função esta sendo chamada aqui toggleMenu();
+btnHamburguer.addEventListener('touchstart', toggleMenu);
 
 //Fechar o menu apos clicar nos links
 const closeMenu = () => {
-  const nav = document.getElementById("navbar");
-  nav.classList.remove("active");
+  const nav = document.getElementById('navbar');
+  nav.classList.remove('active');
 };
-navItem.addEventListener("click", closeMenu);
-navItem.addEventListener("touchstart", closeMenu);
+navItem.addEventListener('click', closeMenu);
+navItem.addEventListener('touchstart', closeMenu);
 
 // --------------------------------------------------------
 
 //Slider function
 const slider = () => {
-  const slides = document.querySelectorAll(".slide");
-  const btnLeft = document.querySelector(".slider__btn--left");
-  const btnRight = document.querySelector(".slider__btn--right");
-  const dotContainer = document.querySelector(".dots");
+  const slides = document.querySelectorAll('.slide');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+  const dotContainer = document.querySelector('.dots');
 
   let curSlide = 0;
   const maxSlide = slides.length;
@@ -64,23 +64,23 @@ const slider = () => {
   const createDots = () => {
     slides.forEach((_, i) => {
       dotContainer.insertAdjacentHTML(
-        "beforeend",
+        'beforeend',
         `<button class="dots__dot" data-slide="${i}"></button>`
       );
     });
   };
 
-  const activateDot = (slide) => {
+  const activateDot = slide => {
     document
-      .querySelectorAll(".dots__dot")
-      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
-      .classList.add("dots__dot--active");
+      .classList.add('dots__dot--active');
   };
 
-  const goToSlide = (slide) => {
+  const goToSlide = slide => {
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
@@ -114,16 +114,16 @@ const slider = () => {
   };
   init();
 
-  btnRight.addEventListener("click", nextSlide);
-  btnLeft.addEventListener("click", prevSlide);
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") prevSlide();
-    e.key === "ArrowRight" && nextSlide();
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
   });
 
-  dotContainer.addEventListener("click", (e) => {
-    if (e.target.classList.contains("dots__dot")) {
+  dotContainer.addEventListener('click', e => {
+    if (e.target.classList.contains('dots__dot')) {
       const { slide } = e.target.dataset;
       goToSlide(slide);
       activateDot(slide);
@@ -135,42 +135,16 @@ slider();
 // -----------------------------------------------------------------
 
 // Animation scroll
-
-// Otmização
-const debounce = function (func, wait, immediate) {
-  let timeout;
-  return function (...args) {
-    const context = this;
-    const later = () => {
-      timeout = null;
-      !immediate ? func.apply(context, args) : "";
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    callNow ? func.apply(context, args) : "";
-  };
-};
-
-const target = document.querySelectorAll("[data-anime]");
-const animation = "animate";
+const target = document.querySelectorAll('[data-anime]');
+const animation = 'animate';
 
 const animeScroll = () => {
-  const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+  const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
 
-  target.forEach((el) =>
+  target.forEach(el =>
     windowTop > el.offsetTop
       ? el.classList.add(animation)
       : el.classList.remove(animation)
   );
 };
-animeScroll();
-
-if (target.length) {
-  window.addEventListener(
-    "scroll",
-    debounce(function () {
-      animeScroll();
-    }, 5)
-  );
-}
+window.addEventListener('scroll', animeScroll);
