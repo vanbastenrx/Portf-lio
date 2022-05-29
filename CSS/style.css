@@ -23,7 +23,7 @@ body {
 .head {
   overflow-y: hidden;
   box-sizing: border-box;
-  height: 100px;
+  height: 4em;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -32,8 +32,8 @@ body {
 }
 
 .devicon {
-  width: 20%;
-  height: 8vh;
+  width: 3.5em;
+  height: 3em;
 }
 
 #hamburguer {
@@ -49,7 +49,7 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  top: 100px;
+  top: 4em;
   right: 0;
   height: 0;
   transition: 0.6s;
@@ -58,7 +58,7 @@ body {
 }
 
 #navbar.active #menu {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 4em);
 }
 
 #navbar ul {
@@ -78,8 +78,8 @@ body {
 
 #bar {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 1.6em;
+  height: .2em;
   margin: 5px auto;
   background-color: white;
 }
@@ -111,11 +111,11 @@ body {
   text-align: center;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: large;
+  font-size: 1.5em;
 }
 
 .intro-text p {
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 /*Biografia*/
@@ -133,14 +133,12 @@ body {
 
 .description {
   letter-spacing: 4px;
-  font-size: .8rem;
+  font-size: 1.1em;
   font-weight: bold;
   text-align: center;
   padding: 15% 5% 15% 5%;
   color: #fff;
-  width: 100%;
-  max-width: 400px;
-  display: block;
+  width: 17em;
 }
 
 .description p,
@@ -151,7 +149,7 @@ h3 {
 #foto {
   border-radius: 50%;
   width: auto;
-  max-height: 300px;
+  max-height: 15em;
   box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
 }
 
@@ -164,9 +162,9 @@ h3 {
 }
 
 .bio-img {
-  height: 50px;
-  width: 50px;
-  margin: 10px;
+  height: 2.5em;
+  width: 2.5em;
+  margin: .7em;
 }
 
 /*Portfólios/SLIDER*/
@@ -179,12 +177,16 @@ h3 {
 .port-text h1 {
   font-size: 2em;
   padding-bottom: 0;
-  padding-top: 25%;
+  padding-top: 15%;
+}
+
+.port-text p {
+ padding: 1em 1em 0 1em;
 }
 
 .slider {
-  max-width: 100rem;
-  height: 50rem;
+  max-width: 100%;
+  height: 50em;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -270,10 +272,12 @@ h3 {
 
 /*tecnologias*/
 #techs {
+  overflow-y: hidden;
+  height: 100vh;
   background-color: white;
 }
 #techs h3 {
-  padding: 5% 0 3% 0;
+  padding: 2em 0 3% 0;
   display: block;
   font-size: 2em;
   color: black;
@@ -282,33 +286,31 @@ h3 {
 }
 
 .icons {
-  padding-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  padding-bottom: 5%;
 }
 
 .techIcon {
   justify-content: center;
-  padding: 1% 2% 0 2%;
-  width: 20vw;
-  height: 15vh;
+  padding-top: 2em;
+  width: 6em;
+  height: 6em;
 }
 
 /*rodapé*/
 footer {
-  justify-content: center;
   font-size: small;
   clear: both;
   color: white;
   background: #333232;
-  height: 15vh;
+  height: 5em;
 }
 
 footer p {
-  padding-top: 10%;
+  margin-top: 2em;
   text-align: center;
+  font-weight: bold;
 }
 
 /* animation */

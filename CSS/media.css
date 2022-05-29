@@ -1,203 +1,210 @@
-@media only screen and (min-width: 600px) {
-  .devicon {
-    width: 15%;
-    height: 20vh;
+@media only screen and (min-width: 475px) {
+  #techs h3 {
+    padding-top: 2em
   }
+}
+
+@media only screen and (min-width: 600px) {
+  #techs h3 {
+    padding-top: 2em
+  }
+}
+
+@media only screen and (min-width: 900px) {
+ #techs h3 {
+   padding-top: 2em;
+ }
+
+ .techIcon {
+  justify-content: center;
+  padding-top: 2em;
+  width: 6em;
+  height: 6em;
+}
+}
+
+@media only screen and (min-width: 960px) {
 
   .bio {
-    background-repeat: no-repeat;
-    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    
+    width: 100%;
+    height: 100%;
+  }
+
+  .description {
+    letter-spacing: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 5em;
+    color: #fff;
+    width: 17em;
   }
 
   #foto {
     border-radius: 50%;
     width: auto;
-    max-height: 300px;
-    margin: 15% 0 0 5%
+    max-height: 15em;
+    box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
+  }
+
+  .bio-link {
+    display: flex;
+    justify-content: center;
+    margin: 0 -5em 0 50%;
+  }
+
+  .techIcon {
+    justify-content: center;
+    padding-top: 2em;
+    width: 6em;
+    height: 6em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 30%;
+    top: 4em;
+    right: 0;
+    height: 0;
+    transition: 0.6s;
+    background: rebeccapurple;
+    z-index: 1000;
+    opacity: 0.9;
+    overflow-y: hidden;
+    border-radius: 0 0 5% 5%;
+  }
+
+  #navbar.active #menu {
+    height: calc(50vh - 4em);
+  }
+
+  ul a:hover {
+  color: black;
+  background: yellow;
+} 
+
+#sobre {
+  display: flex;
+  height: 90vh;
+}
+
+
+.description {
+  letter-spacing: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  width: 25em;
+}
+
+#foto {
+  margin-top: 4em;
+  border-radius: 50%;
+  width: auto;
+  max-height: 15em;
+  box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
+}
+
+.bio-link {
+  display: flex;
+  justify-content: center;
+  margin: 0 -5em 0 50%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  
+  #sobre {
+    display: flex;
+    height: 100vh;
+  }
+  
+  
+  .description {
+    letter-spacing: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    width: 25em;
+    margin: 0 0;
+  }
+  
+  #foto {
+    margin-top: 4em;
+    border-radius: 50%;
+    width: auto;
+    max-height: 15em;
+    box-shadow: 10px 9px 7px 1px rgba(20, 20, 20, 0.4);
+  }
+  
+  .bio-link {
+    display: flex;
+    justify-content: center;
+    margin: 0 -10em 0 50%;
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  #techs h3 {
+    padding-top: 2em;
+  }
+
+  .description {
+    letter-spacing: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 25em;
+    margin-left: 2em ;
+  }
+  
+  
+  .bio-link {
+    display: flex;
+    justify-content: center;
+    margin: 0 -10em 0 50%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #sobre {
+    width: 100vw;
+    height: 100vh;
+  }
+  .description {
+    width: 50%;
+    margin-left: 15em;
+    padding-top: 5em;
+  }
+
+  .imgbio {
+    text-align: center;
+    width: 50%;
+    margin-top: 5em;
   }
 
   .bio-link {
     display: flex;
     text-align: center;
-    justify-content: center;
-    margin-left: 50%;
-    margin-right: -50%;
+    align-items: center;
+    width: 50vw;
+    margin-bottom: 5em;
   }
 
-  .techIcon {
-    justify-content: center;
-    padding: 1% 2% 0 2%;
-    width:10vw;
-    height: 15vh;
+  .bio-img {
+    height: 5em;
+    width: 5em;
+    margin: .7em;
   }
-
-  footer {
-    height: 30vh;
-    padding-bottom: 5%;
-  }
-}
-
-@media only screen and (min-width: 800px) and (max-width:1180px){
-  .devicon {
-    width: 6%;
-    height: 10vh;
-  }
-  footer {
-    height: 35vh;
-  }
-
-}
-
-@media only screen and (min-width: 1200px){
-  .head {
-      overflow-y: hidden;
-      box-sizing: border-box;
-      height: 100px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      background: #333232;
-      justify-content: space-between;
-    }
-    .devicon {
-      width: 5%;
-      height: 8vh;
-    }
-    #menu {
-      display: block;
-      position: absolute;
-      width: 20%;
-      top: 100px;
-      right: 0;
-      height: 0;
-      transition: 0.6s;
-      background: rebeccapurple;
-      z-index: 1000;
-      overflow-y: hidden;
-    }
-
-    #navbar.active #menu {
-      height: calc(100vh - 100px);
-    }
-
-    #intro {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      background: white;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .intro-text {
-      width: 400px;
-      animation-name: opac;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      padding: 0 5% 0 5%;
-      color: black;
-      padding-top: 5%;
-      justify-content: center;
-      text-align: center;
-      font-weight: bold;
-      letter-spacing: 2px;
-      font-size: 32px;
-    }
-
-    .bio {
-      background-image: url("../IMG/portfolio-background.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-    }
-
-    /* Para o desktop */
-      ul a:hover {
-      color: black;
-      background: yellow;
-      border-radius: 5%;
-      box-shadow: rgba(20, 20, 20, 0.4);
-      }
-
-    .description {
-      padding-top: 1%;
-      letter-spacing: 4px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-align: left;
-      color: #fff;
-      width: 100%;
-      max-width: 500px;
-      margin: 10% 0 0 45%;
-    }
-
-    #foto {
-      border-radius: 50%;
-      width: auto;
-      max-height: 400px;
-      margin-top: 12%
-    }
-
-    .bio-link {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      margin-left: 50%;
-      margin-right: -50%;
-    }
-
-    .slider {
-      max-width: 90rem;
-      height: 70rem;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #techs {
-      padding: 2% 0 20px 0;
-      background-color: white;
-    }
-    #techs h3 {
-      padding: 5% 0 3% 0;
-      display: block;
-      font-size: 2em;
-      color: black;
-      text-align: center;
-      letter-spacing: 2px;
-    }
-    
-    .icons {
-      padding-top: 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr ;
-      text-align: center;
-      padding-bottom: 5%;
-    }
-    
-    .techIcon {
-      justify-content: center;
-      padding: 1% 2% 0 2%;
-      width:10vw;
-      height: 15vh;
-    }
-    footer {
-      overflow-y: hidden;
-      font-size: small;
-      clear: both;
-      color: white;
-      background: #333232;
-      height: 10px;
-    }
-    
-    footer p {
-      padding-top: 2%;
-      text-align: center;
-    }      
 }
