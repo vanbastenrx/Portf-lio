@@ -4,20 +4,13 @@
     
   }
 
-  .icons{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 @media only screen and (min-width: 600px) {
   #techs h3 {
     padding-top: 2em
   }
-  #techs{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+
 }
 
 @media only screen and (min-width: 900px) {
