@@ -1,6 +1,25 @@
-@media only screen and (min-width: 475px) {
+@media only screen and (min-width: 280px) {
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .description {
+    font-size: .8em;
+  }
+
+  #techs h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 410px) {
+
   #techs h3 {
     padding-top: 2em
+  }
+
+  footer {
+    height: 7em;
   }
 
 }
@@ -10,20 +29,104 @@
     padding-top: 2em
   }
 
+  footer {
+    height: 5em;
+  }
+
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 767px) {
+  #techs {
+    height: 50em;
+  }
+
+  footer {
+    height: 14em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #techs {
+    height: 50em;
+  }
+
+  footer {
+    height: 23em;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  #techs {
+    height: 45em;
+  }
+
+  footer {
+    height: 5em;
+  }
+}
+
+@media only screen and (min-width: 912px) {
+  
+  #techs {
+    height: 45em;
+  }
+
  #techs h3 {
    padding-top: 2em;
  }
 
- .techIcon {
-  justify-content: center;
-  padding-top: 2em;
-  width: 6em;
-  height: 6em;
+
+footer {
+  height: 34em;
 }
+
+footer p {
+  padding-top: .2em ;
 }
+
+}
+
+@media only screen and (min-width: 915px) {
+  
+  #techs {
+    height: 45em;
+  }
+
+ #techs h3 {
+   padding-top: 2em;
+ }
+
+
+footer {
+  height: 5em;
+}
+
+footer p {
+  padding-top: .2em ;
+}
+
+}
+@media only screen and (min-width: 914px) {
+  
+  #techs {
+    height: 45em;
+  }
+
+ #techs h3 {
+   padding-top: 2em;
+ }
+
+
+footer {
+  height: 5em;
+}
+
+footer p {
+  padding-top: .2em ;
+}
+
+}
+
 
 @media only screen and (min-width: 960px) {
 
@@ -155,6 +258,10 @@
 }
 
 @media only screen and (min-width: 1367px) {
+  #techs {
+    padding-right: 9em;
+  }
+  
   #techs h3 {
     padding-top: 2em;
   }
@@ -176,6 +283,10 @@
     display: flex;
     justify-content: center;
     margin: 0 -10em 0 50%;
+  }
+
+  footer {
+    height: 8em;
   }
 }
 
